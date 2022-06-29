@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:internship_algoriza_task1/core/utils/app_colors.dart';
 
+import '../utils/assets_manager.dart';
+
 class CustomOutlinedButton extends StatelessWidget {
   const CustomOutlinedButton({Key? key}) : super(key: key);
 
@@ -19,12 +21,15 @@ class CustomOutlinedButton extends StatelessWidget {
           )),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Icon(Icons.login),
-          SizedBox(
+        children:  [
+         SizedBox(
+           height:22 ,
+             width: 22,
+             child: Image.asset(ImageAssets.googleLogo,fit: BoxFit.contain)),
+          const SizedBox(
             width: 7,
           ),
-          Text('Sign with by google'),
+          const Text('Sign with by google'),
         ],
       ),
     );

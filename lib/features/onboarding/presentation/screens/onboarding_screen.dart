@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship_algoriza_task1/config/routes/app_routes.dart';
 import 'package:internship_algoriza_task1/core/utils/app_colors.dart';
 import 'package:internship_algoriza_task1/core/utils/app_strings.dart';
 import 'package:internship_algoriza_task1/core/utils/assets_manager.dart';
@@ -80,13 +81,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(
                 height: 30,
               ),
-              const CustomElevatedButton(txt: 'Get Started'),
+              CustomElevatedButton(
+                  txt: 'Get Started',
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.loginRoute);
+                  }),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text('Don`t have an account?'),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.registerRoute),
                     child: Text('Sign Up',
                         style: TextStyle(
                           color: AppColors.primaryColor,

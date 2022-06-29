@@ -5,8 +5,6 @@ import 'package:internship_algoriza_task1/config/themes/app_theme.dart';
 import 'package:internship_algoriza_task1/core/utils/app_strings.dart';
 import 'package:internship_algoriza_task1/features/onboarding/presentation/screens/onboarding_screen.dart';
 
-import 'features/authentication/presentation/screens/login_screen.dart';
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: appTheme(),
-      home:  const LoginScreen(),
+      home:  const OnboardingScreen(),
       onGenerateRoute: RouteGenerator.getRoute,
     );
   }
