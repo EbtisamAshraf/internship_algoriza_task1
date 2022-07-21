@@ -4,14 +4,14 @@ import 'package:internship_algoriza_task1/features/authentication/presentation/s
 import 'package:internship_algoriza_task1/features/authentication/presentation/screens/register_screen.dart';
 import 'package:internship_algoriza_task1/features/counter/presentation/pages/counter_screen.dart';
 import 'package:internship_algoriza_task1/features/onboarding/presentation/screens/onboarding_screen.dart';
-
-
+import 'package:internship_algoriza_task1/features/users/presentation/pages/users_screen.dart';
 
 class Routes {
   static const String initRoute = '/';
   static const String registerRoute = '/register';
   static const String loginRoute = '/login';
   static const String counterRoute = '/counter';
+  static const String userRoute = '/user';
 }
 
 class RouteGenerator {
@@ -21,14 +21,16 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
 
       case Routes.registerRoute:
-        return MaterialPageRoute(builder: (_) =>  RegisterScreen());
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
 
       case Routes.loginRoute:
-        return MaterialPageRoute(builder: (_) =>  LoginScreen());
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
       case Routes.counterRoute:
-        return MaterialPageRoute(builder: (_) =>  const CounterScreen());
+        return MaterialPageRoute(builder: (_) => const CounterScreen());
 
+      case Routes.userRoute:
+        return MaterialPageRoute(builder: (_) =>  UsersScreen());
 
       default:
         return unDefinedRoute();
